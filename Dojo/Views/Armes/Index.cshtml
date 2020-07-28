@@ -1,0 +1,38 @@
+﻿@model IEnumerable<BO.Arme>
+@{
+    ViewBag.Title = "Liste armes";
+}
+<h2>Liste des armes</h2>
+
+<p>
+    @Html.ActionLink("Ajouter une arme", "Create", null, new { @class = "btn btn-success" })
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nom)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Degats)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nom)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Degats)
+            </td>
+            <td>
+                @Html.ActionLink("Modifier", "Edit", new { id = item.Id }, new { @class = "btn btn-default" })
+                @Html.ActionLink("Détails", "Details", new { id = item.Id }, new { @class = "btn btn-default" })
+                @Html.ActionLink("Supprimer", "Delete", new { id = item.Id }, new { @class = "btn btn-danger" })
+            </td>
+        </tr>
+    }
+
+</table>

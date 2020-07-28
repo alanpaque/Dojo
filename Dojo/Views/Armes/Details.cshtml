@@ -1,0 +1,16 @@
+﻿@model BO.Arme
+@{
+    ViewBag.Title = "Détail armes";
+}
+<h2>Détail d'une arme</h2>
+
+<div>
+    @Html.Partial("_Arme", Model)
+</div>
+<p>
+    @Html.ActionLink("Modifier", "Edit", new { id = Model.Id }, new { @class = "btn btn-default" })
+</p>
+
+<div>
+    @Html.ActionLink("Retour à la liste", "Index", null, new { @class = "btn btn-default" })
+</div>

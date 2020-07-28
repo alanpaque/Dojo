@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30309.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dojo", "Dojo.csproj", "{A72600A0-9CEF-4A1C-A8DD-ECEE06430F1F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BO", "..\BO\BO.csproj", "{98833D12-5D4D-4517-A9E0-04EBF6CC8762}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A72600A0-9CEF-4A1C-A8DD-ECEE06430F1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A72600A0-9CEF-4A1C-A8DD-ECEE06430F1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A72600A0-9CEF-4A1C-A8DD-ECEE06430F1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A72600A0-9CEF-4A1C-A8DD-ECEE06430F1F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98833D12-5D4D-4517-A9E0-04EBF6CC8762}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98833D12-5D4D-4517-A9E0-04EBF6CC8762}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98833D12-5D4D-4517-A9E0-04EBF6CC8762}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98833D12-5D4D-4517-A9E0-04EBF6CC8762}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EDDD97C1-FCFD-41C5-AC39-3EC10DBB61A9}
+	EndGlobalSection
+EndGlobal
