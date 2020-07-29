@@ -42,6 +42,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Arme.cs" />
+    <Compile Include="ArtMartial.cs" />
+    <Compile Include="DbEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Samourai.cs" />
   </ItemGroup>

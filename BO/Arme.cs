@@ -1,8 +1,7 @@
 ﻿namespace BO
 {
-    public class Arme
+    public class Arme : DbEntity
     {
-        public int Id { get; set; }
         public string Nom { get; set; }
         public int Degats { get; set; }
     }

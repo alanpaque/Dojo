@@ -1,0 +1,22 @@
+﻿@model BO.ArtMartial
+
+@{
+    ViewBag.Title = "suppression art martiaux";
+}
+
+<h2>Delete</h2>
+
+<h3>Etes vous sur de vouloir supprimer cet art martial ?</h3>
+<div>
+    @Html.Partial("_ArtMartial", Model)
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Supprimer" class="btn btn-default" /> |
+            @Html.ActionLink("Retour à la liste", "Index")
+        </div>
+    }
+</div>

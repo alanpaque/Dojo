@@ -1,0 +1,15 @@
+﻿@model BO.ArtMartial
+
+@{
+    ViewBag.Title = "Détail art martiaux";
+}
+
+<h2>Detail d'un art martial</h2>
+
+<div>
+    @Html.Partial("_ArtMartial", Model)
+</div>
+<p>
+    @Html.ActionLink("Motifier", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Retour à la liste", "Index")
+</p>
