@@ -13,6 +13,7 @@ namespace Dojo.Models
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<BO.Samourai>().HasMany(x => x.ArtMartials).WithMany();
             base.OnModelCreating(modelBuilder);
         }
     }

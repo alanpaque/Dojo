@@ -32,7 +32,8 @@ namespace Dojo.Controllers
         public ActionResult Create()
         {
             var vm = new SamouraiVM();
-            vm.Armes = db.Armes.ToList();
+            List<int> armeIds = db.Samourais.Where(x => x.Arme != null).Select(x => x.Arme.Id).ToList();
+            vm.Armes = db.Armes.Where(x => !armeIds.Contains(x.Id)).ToList();
             vm.ArtMartials.AddRange(db.ArtMartials.ToList());
             return View(vm);
         }
@@ -58,7 +59,8 @@ namespace Dojo.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            vm.Armes = db.Armes.ToList();
+            List<int> armeIds = db.Samourais.Where(x => x.Arme != null).Select(x => x.Arme.Id).ToList();
+            vm.Armes = db.Armes.Where(x => !armeIds.Contains(x.Id)).ToList();
             vm.ArtMartials.AddRange(db.ArtMartials.ToList());
             return View(vm);
         }
@@ -153,6 +155,10 @@ namespace Dojo.Controllers
         public ActionResult DeleteConfirmed(int id)
         {
             Samourai samourai = db.Samourais.Find(id);
+            foreach (var item in samourai.ArtMartials) {
+                db.Entry(item).State = EntityState.Modified;
+            }
+            samourai.ArtMartials.Clear();
             db.Samourais.Remove(samourai);
             db.SaveChanges();
             return RedirectToAction("Index");

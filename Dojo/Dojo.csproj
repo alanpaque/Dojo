@@ -134,11 +134,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202007290933482_DojoMigration.cs" />
-    <Compile Include="Migrations\202007290933482_DojoMigration.designer.cs">
-      <DependentUpon>202007290933482_DojoMigration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Context.cs" />
     <Compile Include="Models\SamouraiVM.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -222,11 +217,6 @@
       <Project>{98833d12-5d4d-4517-a9e0-04ebf6cc8762}</Project>
       <Name>BO</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\202007290933482_DojoMigration.resx">
-      <DependentUpon>202007290933482_DojoMigration.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

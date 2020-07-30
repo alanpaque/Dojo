@@ -14,12 +14,31 @@
         @Html.DisplayFor(model => model.Nom)
     </dd>
     <dt>
-        @Html.DisplayNameFor(model => model.Arme) uti
+        @Html.DisplayNameFor(model => model.Arme)
     </dt>
     <dd>
         @if (Model.Arme != null)
         {
             @Html.DisplayFor(model => model.Arme.Nom);
         }
+    </dd>
+    <dt>
+        @Html.DisplayNameFor(model => model.ArtMartials)
+    </dt>
+    <dd>
+        @if (Model.ArtMartials.Count > 0)
+        {
+            int i = 0;
+            foreach (var artM in Model.ArtMartials)
+            {
+                @Html.DisplayFor(modelItem => artM.Nom)<br />
+            }
+        }
+    </dd>
+    <dt>
+        @Html.DisplayNameFor(model => model.Potentiel)
+    </dt>
+    <dd>
+        @Html.DisplayFor(model => model.Potentiel)
     </dd>
 </dl>

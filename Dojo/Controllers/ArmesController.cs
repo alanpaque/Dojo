@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Diagnostics;
 using System.Linq;
@@ -80,20 +81,17 @@ namespace Dojo.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             Arme arme = db.Armes.Find(id);
-            if (arme == null) {
+            if (arme == null)
+            {
                 return HttpNotFound();
             }
-
-            try {
-                var samourais = db.Samourais.Where(s => s.Arme.Id == id).ToList();
-                if (samourais.Any()) {
-                    ViewBag.Samourais = samourais.Select(s => s.Nom).ToList();
-                }
+            int SamouraiArme = db.Samourais.Where(x => x.Arme.Id == id.Value).ToList().Count;
+            if (SamouraiArme >0)
+            {
+                ModelState.AddModelError("", "Cette arme appartient au samourai \"" + db.Samourais.FirstOrDefault(x => x.Arme.Id == id.Value).Nom + "\" elle ne peut donc pas être supprimé");
+                return View();
             }
-            catch (Exception ex) {
-                Debug.WriteLine(ex.Message);
-            }
-
+            
             return View(arme);
         }
 

@@ -1,14 +1,13 @@
 ﻿@model BO.ArtMartial
 
 @{
-    ViewBag.Title = "Delete";
+    ViewBag.Title = "Suppression art martiaux";
 }
 
-<h2>Delete</h2>
+<h2>Supression d'un art martial</h2>
 
-<h3>Are you sure you want to delete this?</h3>
+<h3>Voulez vous supprimer cette art martial ?</h3>
 <div>
-    <h4>ArtMartial</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -21,12 +20,16 @@
 
     </dl>
 
-    @using (Html.BeginForm()) {
+    @using (Html.BeginForm())
+    {
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
+            <input type="submit" value="Supprimer" class="btn btn-default" /> 
         </div>
     }
+</div>
+<br />
+<div>
+    @Html.ActionLink("Retour à la liste", "Index", null, new { @class = "btn btn-default" })
 </div>
